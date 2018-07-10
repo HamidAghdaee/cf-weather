@@ -1,0 +1,23 @@
+{
+  "plugins": [
+    [
+      "transform-react-fela-display-name",
+      {
+        "reactFelaPackageRegEx": "(@cloudflare/style-container|react-fela)",
+        "functionNameRegEx":
+          "(createComponent(WithProxy|Styles)?|applyTheme|withRenderer|applyStaticStyles|createStyledComponent)$"
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "presets": ["next/babel"]
+    },
+    "production": {
+      "presets": ["next/babel"]
+    },
+    "test": {
+      "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
+    }
+  }
+}
